@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OrietaTour - Escapada a Villa de Merlo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f0f4f8",
+                    "outline-variant": "#c2c6d4",
+                    "inverse-on-surface": "#eef1f0",
+                    "tertiary": "#004d11",
+                    "surface-container-high": "#e1e7ef",
+                    "surface-tint": "#115cb9",
+                    "primary-container": "#0056b3",
+                    "outline": "#727784",
+                    "primary": "#003f87",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "on-surface": "#181c1c",
+                    "surface-dim": "#d7dbda",
+                    "secondary": "#785900",
+                    "surface-container-low": "#e8eff5",
+                    "surface": "#f0f4f8",
+                    "on-primary-container": "#bbd0ff",
+                    "on-secondary-fixed": "#261a00",
+                    "on-tertiary-fixed": "#002204",
+                    "on-primary-fixed-variant": "#004491",
+                    "inverse-surface": "#2d3131",
+                    "on-surface-variant": "#424752",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#6c5000",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#ffdf9e",
+                    "secondary-container": "#fdc003",
+                    "tertiary-fixed": "#94f990",
+                    "primary-fixed": "#d7e2ff",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#001a40",
+                    "tertiary-container": "#00681a",
+                    "inverse-primary": "#acc7ff",
+                    "surface-container": "#ebeeed",
+                    "on-background": "#181c1c",
+                    "secondary-fixed-dim": "#fabd00",
+                    "surface-container-highest": "#e0e3e2",
+                    "surface-bright": "#f7faf9",
+                    "primary-fixed-dim": "#acc7ff",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e0e3e2",
+                    "on-tertiary-container": "#82e680",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "1.5rem",
+                    "xl": "2.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(240, 244, 248, 0.8);
+            backdrop-filter: blur(16px);
+        }
+        .text-shadow-strong {
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .pattern-dots {
+            background-image: radial-gradient(rgba(0, 63, 135, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed pattern-dots">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Logo de OrietaTour" class="h-10 w-auto hover:scale-105 transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyzWlhJHWDIeIEc5b0r7B3OWMytrUb_Prap-F_5j1PghEqWGUvn4UgLEDsaG0f3q6g-bQaQDZHO4PNIbnE8w_s_vDEaM-CtrYSLRaioGWi5RDIbGygFql2Dy6HAweGKSENm-fmd8CSyaY5r3Mkumrz0YF6_7Zm1aoJX_NdvuXNBpQ5VxRQ9XqM0sDqcCQsIRRVpWJ4RJqJX561IJZCV5W3rHBsIYS1VnkPMVviKYF0NRUWoa2MQY1JpJG11QiWVnNIzy7CpARuBM"/>
+<span class="text-2xl font-bold text-primary font-headline tracking-tight">OrietaTour</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-secondary pb-1 font-label" href="#">Destinos</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-label" href="#">Servicios</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-label" href="#">Nosotros</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-label" href="#">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-bold hover:bg-secondary hover:text-white transition-all shadow-md active:scale-95">
+                Reservar Ahora
+            </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16">
+<div class="absolute inset-0 z-0">
+<img alt="Villa de Merlo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPTor_x4IoH-mosoccHtbZq5x9FkcMNu-LZBSpuTV77HwzKEEIcevT9Iv0l4yiVzvG_46kSF3SdhS07L-NPgi3_nVzj6EADutZeapXIiAOCK47tIq4iWF9iWmdsTI89wBFWTUTXKQE8vqgN-Z9YucKRgNSbv-STgFhIVss-X5i_q6AVP_HBhM4-lsD9o0s8pHLC-dW8PrLWiLtUkoPAxRUXmiuQng3v_yM69nmMNjdZKRa-8vTAStmtL9zmAFnUEq-aE67nMOpGg4"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/20 to-background"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+<div class="inline-block px-4 py-1 mb-4 bg-secondary-container text-on-secondary-container rounded-lg text-xs font-black tracking-widest uppercase shadow-lg">
+            Paquete Exclusivo
+        </div>
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white font-headline leading-tight tracking-tight mb-4 text-shadow-strong">
+            Escapada a Villa de Merlo
+        </h1>
+<p class="text-lg md:text-2xl text-white font-medium mb-10 opacity-95 tracking-wide italic text-shadow-strong">
+            Viví el tercer microclima del mundo
+        </p>
+<div class="bg-white/95 backdrop-blur-xl p-6 md:p-8 rounded-2xl shadow-2xl inline-flex flex-col md:flex-row items-center gap-6 border border-white/20">
+<div class="text-left">
+<p class="text-on-surface-variant text-[10px] font-black uppercase tracking-[0.2em] mb-1">Precio Promocional</p>
+<div class="text-3xl md:text-4xl font-black text-primary font-headline">
+                    $345.000 <span class="text-sm font-bold text-on-surface-variant">POR PERSONA</span>
+</div>
+</div>
+<div class="hidden md:block h-12 w-px bg-outline-variant/30"></div>
+<button class="w-full md:w-auto bg-secondary-container text-on-secondary-container px-10 py-4 rounded-xl text-lg font-black hover:bg-secondary hover:text-white transition-all shadow-xl hover:-translate-y-1 active:translate-y-0">
+                Reservar Ahora
+            </button>
+</div>
+</div>
+</header>
+<!-- Booking Highlights -->
+<section class="py-16 px-6 relative">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-10 rounded-2xl shadow-xl shadow-blue-900/5 border border-primary/5 relative overflow-hidden group">
+<div class="absolute -right-6 -top-6 text-primary opacity-[0.03] transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[160px]">payments</span>
+</div>
+<h3 class="text-2xl font-black text-primary font-headline mb-3">Reservá con el 30%</h3>
+<p class="text-on-surface-variant text-base leading-relaxed mb-6">Asegurá tu lugar hoy mismo con una seña mínima y congelá el precio de tu aventura.</p>
+<div class="flex items-center gap-2 text-secondary font-bold group-hover:gap-4 transition-all">
+<span>Ver métodos de pago</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<div class="bg-white p-10 rounded-2xl shadow-xl shadow-blue-900/5 border border-primary/5 relative overflow-hidden group">
+<div class="absolute -right-6 -top-6 text-primary opacity-[0.03] transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[160px]">event_available</span>
+</div>
+<h3 class="text-2xl font-black text-primary font-headline mb-3">Saldo 7 días antes</h3>
+<p class="text-on-surface-variant text-base leading-relaxed mb-6">Disfrutá de la flexibilidad de pagar el resto del viaje apenas una semana antes de la salida.</p>
+<div class="flex items-center gap-2 text-secondary font-bold group-hover:gap-4 transition-all">
+<span>Más información</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Package Details Section -->
+<section class="py-20 px-6 bg-surface-container-low border-y border-primary/10">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-sm uppercase font-black text-secondary tracking-[0.2em] mb-2">Itinerario y Servicios</h2>
+<h3 class="text-3xl md:text-4xl font-black text-primary font-headline">Detalles del Paquete</h3>
+</div>
+<div class="hidden md:block h-px flex-grow bg-primary/10 mx-8 mb-4"></div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Hotel Card -->
+<div class="md:col-span-8 bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-lg border border-primary/5 group">
+<div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img alt="Hotel Valle del Sol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzucl9gzInBuSHv2PvYCL07BL4EhO_7whK5v5Qnghsllw4hlMwOndC-Rtu3wIUWKZDObY_PX1rJ9wpCEMS9dnKiqkU8hEhVGqPrCaJ4FJGu0AinXSAD__KF0rBq3biSfmlA-O-HjCOSugbugBy_XNXF3jmiF7dLnZtMUfmCTGfQTihgx2J1m_umgg0P4kKKz8nxppR9DL_7uNNR1oQb-RZnlf05GYRvQ5SYPvoX0l0-X_Mx4l-11VUqgEZHigShJ_kpuAr2BEOq7I"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-center bg-gradient-to-br from-white to-surface-container-low">
+<div class="flex items-center gap-1 text-secondary mb-3">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+<h4 class="text-2xl font-black text-primary font-headline mb-3">Hotel Valle del Sol</h4>
+<p class="text-on-surface-variant leading-relaxed text-sm">Alojamiento de primer nivel en el corazón de Merlo, con vistas panorámicas a las Sierras Comechingones y atención personalizada.</p>
+</div>
+</div>
+<!-- Departure Info -->
+<div class="md:col-span-4 bg-primary text-on-primary p-8 rounded-2xl flex flex-col justify-between shadow-xl shadow-primary/20 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]">flight_takeoff</span>
+</div>
+<span class="material-symbols-outlined text-3xl mb-6 bg-white/10 w-12 h-12 flex items-center justify-center rounded-lg">calendar_month</span>
+<div class="relative z-10">
+<p class="text-on-primary-container text-[10px] font-black uppercase tracking-[0.2em] mb-1">Fecha de Salida</p>
+<p class="text-3xl font-black font-headline">16 de Mayo</p>
+</div>
+</div>
+<!-- Stats Rows -->
+<div class="md:col-span-4 bg-white p-6 rounded-2xl flex items-center gap-5 shadow-md border border-primary/5 hover:border-primary/20 transition-colors">
+<div class="bg-primary/5 p-3 rounded-xl text-primary">
+<span class="material-symbols-outlined text-2xl">schedule</span>
+</div>
+<div>
+<p class="text-xl font-black text-primary font-headline">5 Días / 3 Noches</p>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Estadía completa</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-white p-6 rounded-2xl flex items-center gap-5 shadow-md border border-primary/5 hover:border-primary/20 transition-colors">
+<div class="bg-primary/5 p-3 rounded-xl text-primary">
+<span class="material-symbols-outlined text-2xl">restaurant</span>
+</div>
+<div>
+<p class="text-xl font-black text-primary font-headline">Pensión completa</p>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Sabores regionales</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-white p-6 rounded-2xl flex items-center gap-5 shadow-md border border-primary/5 hover:border-primary/20 transition-colors">
+<div class="bg-primary/5 p-3 rounded-xl text-primary">
+<span class="material-symbols-outlined text-2xl">support_agent</span>
+</div>
+<div>
+<p class="text-xl font-black text-primary font-headline">Coordinación 24/7</p>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Asistencia permanente</p>
+</div>
+</div>
+<!-- Highlight Row -->
+<div class="md:col-span-6 bg-gradient-to-br from-tertiary to-green-900 text-on-tertiary p-10 rounded-2xl relative overflow-hidden shadow-lg">
+<div class="relative z-10">
+<h4 class="text-xl font-black font-headline mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined">hiking</span>
+                        Actividad Incluida
+                    </h4>
+<p class="text-2xl font-black mb-2">Caminata de dificultad baja</p>
+<p class="text-sm opacity-80 max-w-xs">Explorá los senderos naturales de las sierras guiado por expertos locales certificados.</p>
+</div>
+<span class="material-symbols-outlined absolute -bottom-6 -right-6 text-[140px] opacity-10">forest</span>
+</div>
+<div class="md:col-span-6 bg-secondary-container text-on-secondary-container p-10 rounded-2xl relative overflow-hidden shadow-lg">
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-3xl">health_and_safety</span>
+<h4 class="text-xl font-black font-headline uppercase tracking-tight">Asistencia médica</h4>
+</div>
+<p class="text-lg font-bold leading-snug">Viajá con total tranquilidad. Cobertura integral durante todo el recorrido incluida para vos y tu familia.</p>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-[120px] opacity-[0.05]">medical_services</span>
+</div>
+<!-- Extras -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl flex justify-between items-center border border-primary/5 shadow-sm group hover:bg-white transition-all">
+<div class="flex items-center gap-5">
+<span class="material-symbols-outlined text-3xl text-primary">local_pizza</span>
+<span class="text-lg font-bold text-primary">Pizza libre de bienvenida</span>
+</div>
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+</div>
+<div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl flex justify-between items-center border border-primary/5 shadow-sm group hover:bg-white transition-all">
+<div class="flex items-center gap-5">
+<span class="material-symbols-outlined text-3xl text-primary">bakery_dining</span>
+<span class="text-lg font-bold text-primary">Visita a fábrica de alfajores</span>
+</div>
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-20 px-6">
+<div class="max-w-7xl mx-auto bg-primary rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-primary/40">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary via-primary-container/80 to-blue-400/30 opacity-60"></div>
+<div class="relative z-10">
+<h2 class="text-3xl md:text-5xl font-black text-white font-headline mb-6 max-w-3xl mx-auto leading-tight">
+                ¿Listo para descubrir la magia de Merlo?
+            </h2>
+<p class="text-white/80 text-lg md:text-xl mb-12 max-w-xl mx-auto font-medium">
+                Últimos cupos disponibles para mayo. Asegurá tu lugar ahora y pagá el saldo después.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+<button class="w-full sm:w-auto bg-secondary-container text-on-secondary-container px-12 py-5 rounded-2xl text-xl font-black hover:bg-secondary hover:text-white transition-all shadow-xl hover:-translate-y-1">
+                    Reservar Ahora
+                </button>
+<button class="w-full sm:w-auto bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-12 py-5 rounded-2xl text-xl font-black hover:bg-white hover:text-primary transition-all">
+                    Consultar Itinerario
+                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white/50 border-t border-primary/5 w-full py-16 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<img alt="Logo de OrietaTour" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV9A82_7JSaqi2vpz_ssK6x-p_coFDPb4g4w-mHsOYb_wYUgG-WxmlQQGctAf534gd87-u1ocBphQ_cF5fxH6gThZajF_bz7JwZaIVoId4UbDOL9X787xbo4czIhM7gF-5XGe8bTfz91jHs53oWAvychKol1_uekAyLrEaGCA3XKuPJimJOe41LER7-1b0JnI8SUF8cmrql0xEo-WUY1IznwQn6ktg4sT5GivTinkmLWDB6S-12uwcjMhZu_dSKonl3o8Ws21sCac"/>
+<span class="text-xl font-black text-primary font-headline">OrietaTour</span>
+</div>
+<p class="text-slate-500 font-label text-sm max-w-xs leading-relaxed">
+                    Somos expertos en crear recuerdos inolvidables en los rincones más bellos de Argentina.
+                </p>
+<div class="flex gap-3">
+<a class="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-16 gap-y-4">
+<a class="text-slate-600 hover:text-primary font-bold text-sm transition-colors" href="#">Términos</a>
+<a class="text-slate-600 hover:text-primary font-bold text-sm transition-colors" href="#">Privacidad</a>
+<a class="text-slate-600 hover:text-primary font-bold text-sm transition-colors" href="#">FAQ</a>
+<a class="text-slate-600 hover:text-primary font-bold text-sm transition-colors" href="#">Contacto</a>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-primary/5 text-center md:text-left">
+<p class="text-slate-400 font-label text-[10px] font-black uppercase tracking-[0.2em]">© 2024 OrietaTour - Legajo 12345. Buenos Aires, Argentina.</p>
+</div>
+</div>
+</footer>
+</body></html>
