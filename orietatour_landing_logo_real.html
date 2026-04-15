@@ -1,0 +1,199 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap');
+  .ot-wrap { font-family: 'Nunito', sans-serif; background: #f5f3ee; color: #1a1a2e; }
+  .ot-nav { background: #091930; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 120px; }
+  .ot-logo-img { height: 110px; width: auto; object-fit: contain; }
+  .ot-nav-links { display: flex; gap: 24px; }
+  .ot-nav-links a { color: rgba(255,255,255,0.75); font-size: 14px; font-weight: 600; text-decoration: none; }
+  .ot-nav-btn { background: #f5a020; color: #0a1628; font-size: 13px; font-weight: 700; padding: 8px 18px; border-radius: 20px; text-decoration: none; white-space: nowrap; }
+  .ot-hero { background: #0a1628; padding: 4rem 2rem 3rem; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; overflow: hidden; }
+  .ot-hero-bg { position: absolute; inset: 0; background: #0d2045; }
+  .ot-hero-stripe { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: #f5f3ee; border-radius: 48px 48px 0 0; }
+  .ot-hero-badge { background: #1e6db5; color: #fff; font-size: 12px; font-weight: 700; padding: 5px 14px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem; position: relative; z-index: 2; }
+  .ot-hero h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900; color: #fff; line-height: 1.1; margin: 0 0 1rem; position: relative; z-index: 2; max-width: 640px; }
+  .ot-hero h1 em { color: #f5a020; font-style: normal; }
+  .ot-hero p { color: rgba(255,255,255,0.7); font-size: 16px; max-width: 480px; margin: 0 0 2rem; position: relative; z-index: 2; line-height: 1.6; }
+  .ot-hero-ctas { display: flex; gap: 12px; position: relative; z-index: 2; }
+  .ot-btn-primary { background: #f5a020; color: #0a1628; font-weight: 700; font-size: 15px; padding: 13px 28px; border-radius: 30px; text-decoration: none; }
+  .ot-btn-secondary { border: 2px solid #fff; color: #091930; font-weight: 700; font-size: 15px; padding: 11px 24px; border-radius: 30px; text-decoration: none; background: #fff; }
+  .ot-hero-logo { position: relative; z-index: 2; margin-bottom: 1.5rem; }
+  .ot-hero-logo img { height: 120px; width: auto; }
+  .ot-section { padding: 3rem 2rem; max-width: 900px; margin: 0 auto; }
+  .ot-section-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #1e6db5; margin-bottom: 6px; }
+  .ot-section-title { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: #0a1628; margin: 0 0 0.5rem; line-height: 1.2; }
+  .ot-section-sub { color: #666; font-size: 15px; max-width: 500px; }
+  .ot-tours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 2rem; }
+  .ot-tour-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid #e8e2d6; }
+  .ot-tour-img { height: 180px; position: relative; overflow: hidden; }
+  .ot-scene { position: absolute; inset: 0; }
+  .sky-merlo { position: absolute; inset: 0; background: #4e9ecf; }
+  .sun { position: absolute; top: 18px; right: 50px; width: 50px; height: 50px; background: #f5c842; border-radius: 50%; }
+  .mtn1 { position: absolute; bottom: 0; left: 0; border-left: 120px solid transparent; border-right: 80px solid transparent; border-bottom: 90px solid #3a6b30; }
+  .mtn2 { position: absolute; bottom: 0; left: 60px; border-left: 100px solid transparent; border-right: 120px solid transparent; border-bottom: 110px solid #2e8b3a; }
+  .mtn3 { position: absolute; bottom: 0; right: 0; border-left: 140px solid transparent; border-right: 60px solid transparent; border-bottom: 100px solid #4a8f3f; }
+  .field { position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: #5ab045; }
+  .sky-mza { position: absolute; inset: 0; background: #1e5a9e; }
+  .mtn-a { position: absolute; bottom: 0; left: -10px; border-left: 110px solid transparent; border-right: 90px solid transparent; border-bottom: 130px solid #7a9ec9; }
+  .mtn-b { position: absolute; bottom: 0; left: 40px; border-left: 90px solid transparent; border-right: 110px solid transparent; border-bottom: 150px solid #8fb0d4; }
+  .mtn-c { position: absolute; bottom: 0; right: -10px; border-left: 130px solid transparent; border-right: 60px solid transparent; border-bottom: 120px solid #6a8fbf; }
+  .snow-a { position: absolute; top: 38px; left: 65px; width: 30px; height: 14px; background: #e8eef5; border-radius: 50%; }
+  .snow-b { position: absolute; top: 22px; left: 100px; width: 22px; height: 10px; background: #e8eef5; border-radius: 50%; }
+  .field-b { position: absolute; bottom: 0; left: 0; right: 0; height: 30px; background: #2e7ab5; }
+  .ot-tour-badge { background: #f5a020; color: #0a1628; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; position: absolute; bottom: 12px; left: 12px; z-index: 3; }
+  .ot-tour-badge.new { background: #1e6db5; color: #fff; }
+  .ot-tour-body { padding: 1rem 1.25rem; }
+  .ot-tour-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #0a1628; margin: 0 0 4px; }
+  .ot-tour-meta { color: #888; font-size: 13px; margin: 0 0 10px; }
+  .ot-tour-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .ot-tag { background: #f0f4f8; color: #555; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+  .ot-tag.green { background: #e6f4ea; color: #2e8b3a; }
+  .ot-tour-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid #f0ece4; }
+  .ot-price { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; color: #0a1628; }
+  .ot-price-label { font-size: 11px; color: #999; font-weight: 400; display: block; }
+  .ot-reserve-btn { background: #0a1628; color: #fff; font-size: 13px; font-weight: 700; padding: 9px 18px; border-radius: 20px; text-decoration: none; }
+  .ot-benefits { background: #0a1628; padding: 3rem 2rem; }
+  .ot-benefits-inner { max-width: 900px; margin: 0 auto; }
+  .ot-benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 2rem; }
+  .ot-benefit { text-align: center; }
+  .ot-benefit-icon { width: 48px; height: 48px; background: #1e3a5f; border-radius: 12px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; }
+  .ot-benefit-title { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .ot-benefit-desc { color: rgba(255,255,255,0.5); font-size: 12px; line-height: 1.5; }
+  .ot-cta { background: #f5a020; padding: 3rem 2rem; text-align: center; }
+  .ot-cta h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: #0a1628; margin: 0 0 0.75rem; }
+  .ot-cta p { color: rgba(10,22,40,0.7); font-size: 16px; margin: 0 0 1.5rem; }
+  .ot-wa-btn { display: inline-flex; align-items: center; gap: 8px; background: #0a1628; color: #fff; font-weight: 700; font-size: 16px; padding: 14px 32px; border-radius: 30px; text-decoration: none; }
+  .ot-footer { background: #060e1a; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .ot-footer-text { color: rgba(255,255,255,0.4); font-size: 13px; }
+  .ot-footer-ig { color: #f5a020; font-size: 13px; font-weight: 600; }
+</style>
+
+<div class="ot-wrap">
+
+  <nav class="ot-nav">
+    <img class="ot-logo-img" src="612061952_18502663561074421_655071172119151881_n.jpg" alt="OrietaTour Logo">
+    <div class="ot-nav-links">
+      <a href="#">Destinos</a>
+      <a href="#">Servicios</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Contacto</a>
+    </div>
+    <a href="#" class="ot-nav-btn">Reservar ahora</a>
+  </nav>
+
+  <section class="ot-hero">
+    <div class="ot-hero-bg"></div>
+    <div class="ot-hero-badge">Turismo en Argentina</div>
+    <h1>Tu próxima <em>aventura</em><br>empieza aquí</h1>
+    <p>Exploramos los destinos más hermosos del país con comodidad, seguridad y la calidez de un servicio personalizado.</p>
+    <div class="ot-hero-ctas">
+      <a href="#" class="ot-btn-primary">Ver todos los tours</a>
+      <a href="#" class="ot-btn-secondary">Conocé más</a>
+    </div>
+    <div class="ot-hero-stripe"></div>
+  </section>
+
+  <div class="ot-section">
+    <div class="ot-section-label">Próximas salidas</div>
+    <h2 class="ot-section-title">Tours destacados</h2>
+    <p class="ot-section-sub">Paquetes completos con todo incluido para que solo te preocupes por disfrutar.</p>
+
+    <div class="ot-tours-grid">
+      <div class="ot-tour-card">
+        <div class="ot-tour-img">
+          <div class="ot-scene">
+            <div class="sky-merlo"></div>
+            <div class="sun"></div>
+            <div class="mtn1"></div><div class="mtn2"></div><div class="mtn3"></div>
+            <div class="field"></div>
+          </div>
+          <span class="ot-tour-badge">Próxima salida</span>
+        </div>
+        <div class="ot-tour-body">
+          <p class="ot-tour-title">Villa de Merlo</p>
+          <p class="ot-tour-meta">16 de mayo · 5 días / 3 noches</p>
+          <div class="ot-tour-tags">
+            <span class="ot-tag green">Pensión completa</span>
+            <span class="ot-tag">Caminata incluida</span>
+            <span class="ot-tag">Hotel Valle del Sol</span>
+            <span class="ot-tag">Asist. médica</span>
+          </div>
+          <div class="ot-tour-footer">
+            <div><span class="ot-price-label">Por persona desde</span><span class="ot-price">$345.000</span></div>
+            <a href="#" class="ot-reserve-btn">Reservar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ot-tour-card">
+        <div class="ot-tour-img">
+          <div class="ot-scene">
+            <div class="sky-mza"></div>
+            <div class="mtn-a"></div><div class="mtn-b"></div><div class="mtn-c"></div>
+            <div class="snow-a"></div><div class="snow-b"></div>
+            <div class="field-b"></div>
+          </div>
+          <span class="ot-tour-badge new">Próximamente</span>
+        </div>
+        <div class="ot-tour-body">
+          <p class="ot-tour-title">Mendoza & Alta Montaña</p>
+          <p class="ot-tour-meta">Julio 2026 · 4 días / 3 noches</p>
+          <div class="ot-tour-tags">
+            <span class="ot-tag">Bodegas</span>
+            <span class="ot-tag">Ruta del vino</span>
+            <span class="ot-tag">Aconcagua</span>
+          </div>
+          <div class="ot-tour-footer">
+            <div><span class="ot-price-label">Por persona desde</span><span class="ot-price">Consultar</span></div>
+            <a href="#" class="ot-reserve-btn" style="background:#1e6db5;">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="ot-benefits">
+    <div class="ot-benefits-inner">
+      <div class="ot-section-label" style="color:#f5a020;">Por qué elegirnos</div>
+      <h2 class="ot-section-title" style="color:#fff;">Viajá con total confianza</h2>
+      <div class="ot-benefits-grid">
+        <div class="ot-benefit">
+          <div class="ot-benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f5a020"/></svg></div>
+          <div class="ot-benefit-title">Calidad garantizada</div>
+          <div class="ot-benefit-desc">Hoteles y servicios cuidadosamente seleccionados</div>
+        </div>
+        <div class="ot-benefit">
+          <div class="ot-benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#f5a020"/></svg></div>
+          <div class="ot-benefit-title">Coordinador permanente</div>
+          <div class="ot-benefit-desc">Acompañamiento durante todo el viaje</div>
+        </div>
+        <div class="ot-benefit">
+          <div class="ot-benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" fill="#f5a020"/></svg></div>
+          <div class="ot-benefit-title">Asistencia médica</div>
+          <div class="ot-benefit-desc">Cobertura médica incluida en todos los paquetes</div>
+        </div>
+        <div class="ot-benefit">
+          <div class="ot-benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 12H12L10 20L7 4L5 12H2" stroke="#f5a020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="ot-benefit-title">Todo incluido</div>
+          <div class="ot-benefit-desc">Sin sorpresas: sabés exactamente lo que pagás</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ot-cta">
+    <h2>¿Listo para tu próxima escapada?</h2>
+    <p>Escribinos por WhatsApp y armamos el viaje ideal para vos.</p>
+    <a href="#" class="ot-wa-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="#25D366"/></svg>
+      Consultar por WhatsApp
+    </a>
+  </section>
+
+  <footer class="ot-footer">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAyADIDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAUCBAYDB//EACsQAAIBAwMDAwQDAQAAAAAAAAECAwQREiExBRNBUWEiMnGBodFCkf/EABkBAAMBAQEAAAAAAAAAAAAAAAECAwAEBf/EACERAAICAgIDAQEAAAAAAAAAAAABAhEhAxIxQVFhE//aAAwDAQACEQMRAD8A7yAAAAAAAAAAAHKxlgCxjKSKFJr1MxlJdSbAAAAAAAAAAAAAAATAAAAAAAAAAAPKxzlIqNkWnjPJRFYXJiJQbyjNtg9EACOQJAAAAAAAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHZKAB5AAAAAAAAAAAAAAAAAAf/2Q==" alt="OrietaTour" style="height:36px;width:auto;opacity:0.6;">
+    <div class="ot-footer-text">© 2026 OrietaTour · Turismo de calidad</div>
+    <div class="ot-footer-ig">@OrietaTour</div>
+  </footer>
+
+</div>
